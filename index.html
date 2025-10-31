@@ -18,16 +18,48 @@
 	<!-- Favicon -->
 
 	<!-- Standard Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
 
-<!-- Apple Touch Icon (for iPhones/iPads) -->
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+	<!-- Apple Touch Icon (for iPhones/iPads) -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
 
-<!-- Manifest (for Android PWA) -->
-<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+	<!-- Manifest (for Android PWA) -->
+	<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
 
 	<style>
+		/* LOgo Css */
+		/* Default logo styling */
+		.site-logo {
+			width: 214px;
+			object-fit: contain;
+			margin-bottom: 55px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 992px) {
+			.site-logo {
+				width: 160px;
+				margin-bottom: 40px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				width: 130px;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.site-logo {
+				width: 110px;
+				margin-bottom: 30px;
+			}
+		}
+
+		/* End Logo Css */
 		/* Glassmorphism background for slider text area */
 		.glass-bg {
 			background: rgba(255, 255, 255, 0.15);
@@ -131,14 +163,9 @@
 										class="logo_content d-flex flex-column align-items-start justify-content-center">
 										<div class="logo_line mb-1"></div>
 										<div class="logo d-flex flex-row align-items-center justify-content-center">
-
-											<!-- Logo image -->
-											<img src="./assets/logo2.png" alt="CareMed Logo" class="me-2"
-												style="width: 214px; object-fit: contain; margin-bottom: 55px;">
-
+											<img src="./assets/logo2.png" alt="Ayush Health Care Logo"
+												class="site-logo me-2">
 										</div>
-
-
 									</div>
 								</a>
 							</div>
@@ -369,7 +396,7 @@
 								</p>
 							</div>
 							<div class="button about_button">
-								<a href="#">read more</a>
+								<a href="./about.html">read more</a>
 							</div>
 						</div>
 					</div>
