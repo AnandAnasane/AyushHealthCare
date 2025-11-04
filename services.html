@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Services</title>
+	<title>Ayush: Services</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="CareMed demo project">
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/services.css">
 	<link rel="stylesheet" type="text/css" href="styles/services_responsive.css">
+	<!-- <link rel="stylesheet" href="./styles/watsapp.css"> -->
 
 	<!-- Favicon -->
 
@@ -85,6 +86,38 @@
 		}
 
 		/* End Footer Logo */
+
+		/* footer copyright section */
+		.cr a:hover {
+			color: #0056b3;
+			text-decoration: none;
+		}
+
+		/* TO the top Button */
+
+		#scrollToTopBtn {
+			display: none;
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			z-index: 99;
+			background-color: #28a745;
+			color: white;
+			border: none;
+			outline: none;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			font-size: 22px;
+			cursor: pointer;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+			transition: all 0.3s ease;
+		}
+
+		#scrollToTopBtn:hover {
+			background-color: #218838;
+			transform: translateY(-3px);
+		}
 	</style>
 </head>
 
@@ -122,11 +155,11 @@
 							<div class="header_content d-flex flex-row align-items-center justify-content-start">
 								<nav class="main_nav ml-auto">
 									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="services.html">Services</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a href="./index.html">Home</a></li>
+										<li><a href="./about.html">About us</a></li>
+										<li><a href="./services.html">Services</a></li>
+										<li><a href="./gallery.html">Gallery</a></li>
+										<li><a href="./contact.html">Contact</a></li>
 									</ul>
 								</nav>
 								<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -173,11 +206,11 @@
 			<div class="menu_inner menu_mm">
 				<div class="menu menu_mm">
 					<ul class="menu_list menu_mm">
-						<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
-						<li class="menu_item menu_mm"><a href="about.html">About us</a></li>
-						<li class="menu_item menu_mm"><a href="services.html">Services</a></li>
-						<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-						<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+						<li class="menu_item menu_mm"><a href="./index.html">Home</a></li>
+						<li class="menu_item menu_mm"><a href="./about.html">About us</a></li>
+						<li class="menu_item menu_mm"><a href="./services.html">Services</a></li>
+						<li class="menu_item menu_mm"><a href="./gallery.html">Gallery</a></li>
+						<li class="menu_item menu_mm"><a href="./contact.html">Contact</a></li>
 					</ul>
 				</div>
 				<div class="menu_extra">
@@ -199,10 +232,10 @@
 					<div class="row">
 						<div class="col">
 							<div class="home_content">
-								<div class="home_title"><span>CareMed</span> Services</div>
+								<div class="home_title"><span>Ayush</span> Services</div>
 								<div class="breadcrumbs">
 									<ul>
-										<li><a href="#">Home</a></li>
+										<li><a href="./index.html">Home</a></li>
 										<li>Services</li>
 									</ul>
 								</div>
@@ -214,16 +247,18 @@
 		</div>
 
 		<!-- Services -->
-
 		<div class="services">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="section_title">
 							<h2>Our Featured Services</h2>
+							<p>At Ayush Health Care, we blend traditional Ayurvedic principles with advanced medical
+								practices to provide holistic, preventive, and affordable health solutions.</p>
 						</div>
 					</div>
 				</div>
+
 				<div class="row services_row">
 
 					<!-- Service -->
@@ -231,11 +266,10 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_1.svg" alt=""></div>
-								<div class="service_title trans_200">Free Checkups</div>
+								<div class="service_title trans_200">Ayurvedic Consultation</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>Personalized Ayurvedic consultations from certified practitioners to diagnose
+										imbalances and provide natural healing solutions.</p>
 								</div>
 							</div>
 						</a>
@@ -246,11 +280,10 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_2.svg" alt=""></div>
-								<div class="service_title trans_200">Screening Exams</div>
+								<div class="service_title trans_200">Free Health Checkups</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>We offer regular free health screening and wellness camps to promote preventive
+										care and early diagnosis for a healthier community.</p>
 								</div>
 							</div>
 						</a>
@@ -261,11 +294,10 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_3.svg" alt=""></div>
-								<div class="service_title trans_200">RMI Services</div>
+								<div class="service_title trans_200">Panchakarma Therapy</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>Detoxify and rejuvenate your body with our authentic Panchakarma therapies —
+										restoring balance and enhancing natural immunity.</p>
 								</div>
 							</div>
 						</a>
@@ -276,11 +308,10 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_4.svg" alt=""></div>
-								<div class="service_title trans_200">Dentistry</div>
+								<div class="service_title trans_200">Modern Diagnostics</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>Equipped with modern diagnostic facilities, we ensure accurate results for all
+										essential screenings and laboratory tests.</p>
 								</div>
 							</div>
 						</a>
@@ -291,11 +322,10 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_5.svg" alt=""></div>
-								<div class="service_title trans_200">Neonatology</div>
+								<div class="service_title trans_200">Wellness & Nutrition</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>Get personalized diet and lifestyle plans designed by our wellness experts to
+										improve your energy, focus, and longevity.</p>
 								</div>
 							</div>
 						</a>
@@ -306,110 +336,102 @@
 						<a href="services.html">
 							<div class="service text-center trans_200">
 								<div class="service_icon"><img class="svg" src="images/service_6.svg" alt=""></div>
-								<div class="service_title trans_200">Biochemistry</div>
+								<div class="service_title trans_200">Yoga & Stress Management</div>
 								<div class="service_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.
-									</p>
+									<p>Join our yoga, meditation, and stress-relief programs that enhance mental clarity
+										and emotional stability for a balanced life.</p>
 								</div>
 							</div>
 						</a>
 					</div>
+
 				</div>
 			</div>
 		</div>
 
 		<!-- Features -->
+<div class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="features_container d-flex flex-row flex-wrap align-items-start justify-content-between">
 
-		<div class="features">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div
-							class="features_container d-flex flex-row flex-wrap align-items-start justify-content-between">
+          <!-- Feature -->
+          <div class="feature">
+            <div class="feature_image"><img src="images/features_1.jpg" alt="Ayurvedic Healing"></div>
+            <div class="feature_content">
+              <div class="section_title">
+                <h2>Holistic Healing for You</h2>
+              </div>
+              <div class="feature_text">
+                <p>At Ayush Health Care, we combine Ayurveda, Yoga, and modern science to heal the body, mind, and soul. Our personalized treatments are designed to restore your natural balance and promote long-term wellness.</p>
+              </div>
+            </div>
+          </div>
 
-							<!-- Feature -->
-							<div class="feature">
-								<div class="feature_image"><img src="images/features_1.jpg" alt=""></div>
-								<div class="feature_content">
-									<div class="section_title">
-										<h2>We help you</h2>
-									</div>
-									<div class="feature_text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-											finibus quis est ut, tempor tincidunt ipsum. Nam consequat semp er solli
-											citudin. Aliquam nec dapibus massa.</p>
-									</div>
-								</div>
-							</div>
+          <!-- Feature -->
+          <div class="feature">
+            <div class="feature_image"><img src="images/features_2.jpg" alt="Natural Medicines"></div>
+            <div class="feature_content">
+              <div class="section_title">
+                <h2>Natural & Safe Remedies</h2>
+              </div>
+              <div class="feature_text">
+                <p>At AyushCare, we focus on providing trusted Ayurvedic treatments and wellness solutions that are completely natural and safe.Our approach emphasizes personalized care through authentic Ayurvedic guidance.</p>
+              </div>
+            </div>
+          </div>
 
-							<!-- Feature -->
-							<div class="feature">
-								<div class="feature_image"><img src="images/features_2.jpg" alt=""></div>
-								<div class="feature_content">
-									<div class="section_title">
-										<h2>Medicine for you</h2>
-									</div>
-									<div class="feature_text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-											finibus quis est ut, tempor tincidunt ipsum. Nam consequat semp er solli
-											citudin. Aliquam nec dapibus massa.</p>
-									</div>
-								</div>
-							</div>
+          <!-- Feature -->
+          <div class="feature">
+            <div class="feature_image"><img src="images/features_3.jpg" alt="Modern Diagnostics"></div>
+            <div class="feature_content">
+              <div class="section_title">
+                <h2>Blending Tradition with Technology</h2>
+              </div>
+              <div class="feature_text">
+                <p>Our advanced diagnostic tools, combined with centuries-old Ayurvedic wisdom, help us deliver accurate assessments and effective treatment plans tailored to your unique health needs.</p>
+              </div>
+            </div>
+          </div>
 
-							<!-- Feature -->
-							<div class="feature">
-								<div class="feature_image"><img src="images/features_3.jpg" alt=""></div>
-								<div class="feature_content">
-									<div class="section_title">
-										<h2>Amazing technology</h2>
-									</div>
-									<div class="feature_text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo,
-											finibus quis est ut, tempor tincidunt ipsum. Nam consequat semp er solli
-											citudin. Aliquam nec dapibus massa.</p>
-									</div>
-								</div>
-							</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<!-- Text Section -->
+	<!-- Text Section -->
+<div class="text_section">
+  <div class="container">
+    <div class="row">
 
-		<div class="text_section">
-			<div class="container">
-				<div class="row">
+      <!-- Text Section Image -->
+      <div class="col-lg-5">
+        <div class="text_section_image"><img src="images/text_section.jpg" alt="Ayush Health Care Team"></div>
+      </div>
 
-					<!-- Text Section Image -->
-					<div class="col-lg-5">
-						<div class="text_section_image"><img src="images/text_section.jpg" alt=""></div>
-					</div>
+      <!-- Text Section Content -->
+      <div class="col-lg-7">
+        <div class="text_section_content">
+          <div class="section_title">
+            <h2>A Dedicated Ayurvedic Team for Your Wellbeing</h2>
+          </div>
+          <div class="text_section_text">
+            <p>
+              At <strong>Ayush Health Care</strong>, our experienced Ayurvedic doctors and wellness experts work together to provide holistic healing and long-term health solutions. 
+              We combine the timeless principles of Ayurveda with modern consultation methods to ensure every patient receives personalized care for their unique health needs. 
+              From chronic ailments to lifestyle balance, our team is committed to guiding you toward natural recovery and inner harmony.
+            </p>
+          </div>
+          <!-- <div class="button text_section_button"><a href="#">Read More</a></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-					<!-- Text Section Content -->
-					<div class="col-lg-7">
-						<div class="text_section_content">
-							<div class="section_title">
-								<h2>A great medical team to help your needs</h2>
-							</div>
-							<div class="text_section_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus
-									quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin. Aliquam nec
-									dapibus massa. Pellen tesque in luctus ex. Praesent luctus erat sit amet tortor
-									aliquam bibendum. Nulla ut molestie augue, scelerisque consectetur quam. Dolor sit
-									amet, consectetur adipiscing elit. Cura bitur ante leo, finibus quis est ut, tempor
-									tincidunt ipsum. Nam consequat semper sollicitudin.</p>
-							</div>
-							<div class="button text_section_button"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<!-- Call to action -->
 
@@ -463,10 +485,10 @@
 									<li><a href="./contact.html">Contact</a></li>
 									<li><a href="#">FAQ</a></li>
 									<li><a href="./contact.html">Testimonials</a></li>
-									<li><a href="#">Gallery</a></li>
+									<li><a href="./gallery.html">Gallery</a></li>
 									<li><a href="#">Terms & Conditions</a></li>
 									<li><a href="#">Privacy Policy</a></li>
-								
+
 								</ul>
 							</div>
 						</div>
@@ -486,7 +508,8 @@
 									</li>
 									<li>
 										<div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div>
-										<span>Sagar Apartment, Office No. 7 , Floor No.3 , Parihar Chowk, Sangavi Kesari Road, Above Wellness Forever, Aundh, Pune 411007</span>
+										<span>Sagar Apartment, Office No. 7 , Floor No.3 , Parihar Chowk, Sangavi Kesari
+											Road, Above Wellness Forever, Aundh, Pune 411007</span>
 									</li>
 								</ul>
 							</div>
@@ -506,7 +529,9 @@
 								<div class="cr">
 									Copyright &copy;
 									<script>document.write(new Date().getFullYear());</script>
-									AyushCare | All Rights Reserved
+									AyushCare | All Rights Reserved |
+									Designed by <a href="https://kdrtit.in/" target="_blank"
+										style="color: #007bff; text-decoration: none;">KDRT IT Solutions</a>
 								</div>
 								<div class="footer_social ml-lg-auto">
 									<ul>
@@ -530,6 +555,32 @@
 	<script src="plugins/easing/easing.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
 	<script src="js/services.js"></script>
+
+	<!-- <a href="https://api.whatsapp.com/send?phone=+919011112221" class="whatsapp_float" target="_blank">
+		<i class="fab fa-whatsapp whatsapp-icon"></i>
+	</a> -->
+
+	<!-- Scroll to Top Button -->
+	<button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
+	<script>
+		// Get the button
+		const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+		// Show the button when scrolled down 100px
+		window.onscroll = function () {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				scrollToTopBtn.style.display = "block";
+			} else {
+				scrollToTopBtn.style.display = "none";
+			}
+		};
+
+		// Smooth scroll to top when button clicked
+		scrollToTopBtn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	</script>
 </body>
 
-</html>	
+</html>

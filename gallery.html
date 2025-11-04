@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ayush: Gallery</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="CareMed demo project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/gallery.css">
+	<link rel="stylesheet" type="text/css" href="styles/gallery_responsive.css">
+	<!-- <link rel="stylesheet" href="./styles/watsapp.css"> -->
+
+	<!-- Favicon -->
+
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+
+	<!-- Apple Touch Icon (for iPhones/iPads) -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+
+	<!-- Manifest (for Android PWA) -->
+	<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+	<!-- ✅ Start: Image Gallery Section -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+	<style>
+		/* LOgo Css */
+		/* Default logo styling */
+		.site-logo {
+			width: 214px;
+			object-fit: contain;
+			margin-bottom: 55px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 992px) {
+			.site-logo {
+				width: 160px;
+				margin-bottom: 40px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				width: 130px;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.site-logo {
+				width: 110px;
+				margin-bottom: 30px;
+			}
+		}
+
+		/* End Logo Css */
+
+		/* Gallery section css */
+
+		/* ===== GALLERY SECTION ===== */
+		.gallery {
+			background: #f9f9f9;
+			padding: 60px 0;
+		}
+
+		.gallery .section_title h2 {
+			font-size: 2.2rem;
+			font-weight: 700;
+			color: #333;
+		}
+
+		.gallery .section_title p {
+			color: #555;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		/* ===== Gallery Grid ===== */
+		.gallery-grid {
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			cursor: pointer;
+		}
+
+		.gallery-grid img {
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.4s ease;
+		}
+
+		/* Hover zoom and glow */
+		.gallery-grid:hover img {
+			transform: scale(1.08);
+		}
+
+		.gallery-grid:hover {
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		/* Overlay caption */
+		.gallery-grid::after {
+			content: "View Image";
+			position: absolute;
+			bottom: 12px;
+			left: 50%;
+			transform: translateX(-50%) translateY(20px);
+			opacity: 0;
+			background: rgba(0, 0, 0, 0.6);
+			color: #fff;
+			padding: 6px 14px;
+			border-radius: 5px;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+
+		.gallery-grid:hover::after {
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+		}
+
+
+		/* End Gallery section css */
+		/* Footer Logo */
+
+		/* Responsive adjustments */
+		@media (max-width: 992px) {
+			.footer-logo {
+				width: 160px;
+				margin-bottom: 40px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.footer-logo {
+				width: 130px;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.footer-logo {
+				width: 230px;
+				margin-bottom: 30px;
+			}
+		}
+
+		/* End Footer Logo */
+
+		/* footer copyright section */
+		.cr a:hover {
+			color: #0056b3;
+			text-decoration: none;
+		}
+
+		/* TO the top Button */
+
+		#scrollToTopBtn {
+			display: none;
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			z-index: 99;
+			background-color: #28a745;
+			color: white;
+			border: none;
+			outline: none;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			font-size: 22px;
+			cursor: pointer;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+			transition: all 0.3s ease;
+		}
+
+		#scrollToTopBtn:hover {
+			background-color: #218838;
+			transform: translateY(-3px);
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header trans_200">
+
+			<!-- Top Bar -->
+			<div class="top_bar">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<!-- <div class="top_bar_item"><a href="#">FAQ</a></div>
+								<div class="top_bar_item"><a href="#">Request an Appointment</a></div> -->
+								<div
+									class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">
+									For Emergencies: +91 9011 112 221</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Header Content -->
+			<div class="header_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="header_content d-flex flex-row align-items-center justify-content-start">
+								<nav class="main_nav ml-auto">
+									<ul>
+										<li><a href="./index.html">Home</a></li>
+										<li><a href="./about.html">About us</a></li>
+										<li><a href="./services.html">Services</a></li>
+										<li><a href="./gallery.html">Gallery</a></li>
+										<li><a href="./contact.html">Contact</a></li>
+									</ul>
+								</nav>
+								<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Logo -->
+			<div class="logo_container_outer py-3">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col">
+							<div class="logo_container">
+								<a href="#" class="text-decoration-none text-dark">
+									<div
+										class="logo_content d-flex flex-column align-items-start justify-content-center">
+										<div class="logo_line mb-1"></div>
+										<div class="logo d-flex flex-row align-items-center justify-content-center">
+											<img src="./assets/logo2.png" alt="Ayush Health Care Logo"
+												class="site-logo me-2">
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- Menu -->
+
+		<div class="menu_container menu_mm">
+
+			<!-- Menu Close Button -->
+			<div class="menu_close_container">
+				<div class="menu_close"></div>
+			</div>
+
+			<!-- Menu Items -->
+			<div class="menu_inner menu_mm">
+				<div class="menu menu_mm">
+					<ul class="menu_list menu_mm">
+						<li class="menu_item menu_mm"><a href="./index.html">Home</a></li>
+						<li class="menu_item menu_mm"><a href="./about.html">About us</a></li>
+						<li class="menu_item menu_mm"><a href="./services.html">Services</a></li>
+						<li class="menu_item menu_mm"><a href="./gallery.html">Gallery</a></li>
+						<li class="menu_item menu_mm"><a href="./contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="menu_extra">
+					<div class="menu_appointment"><a href="#">Request an Appointment</a></div>
+					<div class="menu_emergencies">For Emergencies: +91 9011 112 221</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Home -->
+
+		<div class="home">
+			<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/news.jpg"
+				data-speed="0.8"></div>
+			<div class="home_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_content">
+								<div class="home_title"><span>Ayush</span> Gallery</div>
+								<div class="breadcrumbs">
+									<ul>
+										<li><a href="./index.html">Home</a></li>
+										<li>Gallery</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="gallery">
+			<div class="container">
+				<div class="section_title text-center mb-5">
+					<h2> Gallery</h2>
+					<h5>Explore moments from Ayush Health Care — wellness camps, consultations, and community programs.
+					</h5>
+				</div>
+
+				<div class="row g-3">
+					<!-- Repeat this block for 20–30 images -->
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/first.jpg" data-lightbox="ayush-gallery"
+							data-title="Ayush Health Care">
+							<div class="gallery-grid">
+								<img src="./assets/Gallery/first.jpg" alt="Ayush Image 1" loading="lazy">
+							</div>
+						</a>
+					</div>
+
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/01.jpg" data-lightbox="ayush-gallery" data-title="Ayush Health Care">
+							<div class="gallery-grid">
+								<img src="./assets/Gallery/01.jpg" alt="Ayush Image 1" loading="lazy">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/02.jpg" data-lightbox="ayush-gallery" data-title="Ayush Health Care">
+							<div class="gallery-grid">
+								<img src="./assets/Gallery/02.jpg" alt="Ayush Image 2" loading="lazy">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/03.jpg" data-lightbox="ayush-gallery" data-title="Ayush Health Care">
+							<div class="gallery-grid">
+								<img src="./assets/Gallery/03.jpg" alt="Ayush Image 3" loading="lazy">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/04.jpg" data-lightbox="ayush-gallery" data-title="Ayush Health Care">
+							<div class="gallery-grid">
+								<img src="./assets/Gallery/04.jpg" alt="Ayush Image 4" loading="lazy">
+							</div>
+						</a>
+					</div>
+
+					<!-- Example placeholders -->
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/05.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/05.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/06.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/06.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/07.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/07.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/08.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/08.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/09.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/09.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/10.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/10.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/12.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/12.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/20.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/20.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/21.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/21.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/22.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/22.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/23.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/23.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/24.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/24.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/25.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/25.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/26.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/26.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/27.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/27.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/28.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/28.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/29.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/29.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/30.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/30.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/31.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/31.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/32.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/32.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/33.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/33.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/34.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/34.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/35.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/35.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/36.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/36.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/37.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/37.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/38.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/38.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/39.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/39.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/40.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/40.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/41.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/41.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/42.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/42.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/43.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/43.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/44.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/44.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/45.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/45.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/46.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/46.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/47.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/47.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/48.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/48.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/49.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/49.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/50.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/50.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+						<a href="./assets/Gallery/51.jpg" data-lightbox="ayush-gallery">
+							<div class="gallery-grid"><img src="./assets/Gallery/51.jpg" alt="" loading="lazy"></div>
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="footer_container">
+				<div class="container">
+					<div class="row">
+
+						<!-- Footer - Logo and About -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_about">
+								<div class="footer_logo_container">
+									<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+										<img src="./assets/logo2.png" alt="Ayush Health Care Logo"
+											class=" footer-logo site-logo me-2" style="margin-bottom: 0;">
+									</a>
+								</div>
+								<div class="footer_about_text mt-3">
+									<p>AyushCare focuses on holistic healing through Ayurveda, Yoga, and natural
+										therapies, helping you live a balanced and healthy life.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer - Quick Links -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_links footer_column">
+								<div class="footer_title">Quick Links</div>
+								<ul>
+									<li><a href="./about.html">About Us</a></li>
+									<li><a href="./services.html">Services</a></li>
+									<li><a href="./contact.html">Contact</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="./contact.html">Testimonials</a></li>
+									<li><a href="./gallery.html">Gallery</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+
+								</ul>
+							</div>
+						</div>
+
+						<!-- Footer - Contact Info -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_contact footer_column">
+								<div class="footer_title">Contact Us</div>
+								<ul class="footer_about_list">
+									<li>
+										<div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div>
+										<span>+91 9011 112 221</span>
+									</li>
+									<li>
+										<div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div>
+										<span>aayushcareofhealth@gmail.com</span>
+									</li>
+									<li>
+										<div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div>
+										<span>Sagar Apartment, Office No. 7 , Floor No.3 , Parihar Chowk, Sangavi Kesari
+											Road, Above Wellness Forever, Aundh, Pune 411007</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div
+								class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
+								<div class="cr">
+									Copyright &copy;
+									<script>document.write(new Date().getFullYear());</script>
+									AyushCare | All Rights Reserved |
+									Designed by <a href="https://kdrtit.in/" target="_blank"
+										style="color: #007bff; text-decoration: none;">KDRT IT Solutions</a>
+								</div>
+								<div class="footer_social ml-lg-auto">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script src="plugins/easing/easing.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="js/gallery.js"></script>
+
+	<!-- ✅ Lightbox JS & Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- ✅ Fade-in Animation on Scroll -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const items = document.querySelectorAll(".gallery-grid");
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = 1;
+						entry.target.style.transform = "translateY(0)";
+					}
+				});
+			}, { threshold: 0.2 });
+
+			items.forEach(item => {
+				item.style.opacity = 0;
+				item.style.transform = "translateY(40px)";
+				item.style.transition = "all 0.6s ease-out";
+				observer.observe(item);
+			});
+		});
+	</script>
+	<!-- ✅ End: Image Gallery Section -->
+
+	<!-- <a href="https://api.whatsapp.com/send?phone=+919011112221" class="whatsapp_float" target="_blank">
+		<i class="fab fa-whatsapp whatsapp-icon"></i>
+	</a> -->
+
+	<!-- Scroll to Top Button -->
+	<button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
+	<script>
+		// Get the button
+		const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+		// Show the button when scrolled down 100px
+		window.onscroll = function () {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				scrollToTopBtn.style.display = "block";
+			} else {
+				scrollToTopBtn.style.display = "none";
+			}
+		};
+
+		// Smooth scroll to top when button clicked
+		scrollToTopBtn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	</script>
+
+</body>
+
+</html>

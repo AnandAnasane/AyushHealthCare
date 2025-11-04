@@ -232,6 +232,7 @@ section
 	background: #20d34a;
 	content: '';
 	z-index: 0;
+	color: black;
 	-webkit-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
 	-moz-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
 	-ms-transition: all 400ms cubic-bezier(.33,.68,.59,.99);
@@ -853,6 +854,9 @@ section
 	cursor: pointer;
 	margin-top: -8px;
 	padding: 0px 20px;
+}
+.contact_button:hover{
+	color: black;
 }
 .map_row
 {
