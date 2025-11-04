@@ -14,6 +14,18 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/news.css">
 	<link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
+
+	<!-- Favicon -->
+
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+
+	<!-- Apple Touch Icon (for iPhones/iPads) -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+
+	<!-- Manifest (for Android PWA) -->
+	<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
 	<style>
 		/* LOgo Css */
 		/* Default logo styling */
@@ -47,6 +59,32 @@
 		}
 
 		/* End Logo Css */
+
+		/* Footer Logo */
+
+		/* Responsive adjustments */
+		@media (max-width: 992px) {
+			.footer-logo {
+				width: 160px;
+				margin-bottom: 40px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.footer-logo {
+				width: 130px;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.footer-logo {
+				width: 230px;
+				margin-bottom: 30px;
+			}
+		}
+
+		/* End Footer Logo */
 	</style>
 </head>
 
@@ -64,11 +102,11 @@
 					<div class="row">
 						<div class="col">
 							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-								<div class="top_bar_item"><a href="#">FAQ</a></div>
-								<div class="top_bar_item"><a href="#">Request an Appointment</a></div>
+								<!-- <div class="top_bar_item"><a href="#">FAQ</a></div>
+								<div class="top_bar_item"><a href="#">Request an Appointment</a></div> -->
 								<div
 									class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">
-									For Emergencies: +563 47558 623</div>
+									For Emergencies: +91 9011 112 221</div>
 							</div>
 
 						</div>
@@ -144,7 +182,7 @@
 				</div>
 				<div class="menu_extra">
 					<div class="menu_appointment"><a href="#">Request an Appointment</a></div>
-					<div class="menu_emergencies">For Emergencies: +563 47558 623</div>
+					<div class="menu_emergencies">For Emergencies: +91 9011 112 221</div>
 				</div>
 
 			</div>
@@ -363,88 +401,66 @@
 				<div class="container">
 					<div class="row">
 
-						<!-- Footer - About -->
+						<!-- Footer - Logo and About -->
 						<div class="col-lg-4 footer_col">
 							<div class="footer_about">
 								<div class="footer_logo_container">
 									<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-										<div class="logo_content">
-											<div class="logo d-flex flex-row align-items-center justify-content-center">
-												<div class="logo_text">Care<span>Med</span></div>
-												<div class="logo_box">+</div>
-											</div>
-											<div class="logo_sub">Health Care Center</div>
-										</div>
+										<img src="./assets/logo2.png" alt="Ayush Health Care Logo"
+											class=" footer-logo site-logo me-2" style="margin-bottom: 0;">
 									</a>
 								</div>
-								<div class="footer_about_text">
-									<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Curabitur ante leo,
-										finibus quis est ut, tempor tincidunt ipsum.</p>
+								<div class="footer_about_text mt-3">
+									<p>AyushCare focuses on holistic healing through Ayurveda, Yoga, and natural
+										therapies, helping you live a balanced and healthy life.</p>
 								</div>
+							</div>
+						</div>
+
+						<!-- Footer - Quick Links -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_links footer_column">
+								<div class="footer_title">Quick Links</div>
+								<ul>
+									<li><a href="./about.html">About Us</a></li>
+									<li><a href="./services.html">Services</a></li>
+									<li><a href="./contact.html">Contact</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="./contact.html">Testimonials</a></li>
+									<li><a href="#">Gallery</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								
+								</ul>
+							</div>
+						</div>
+
+						<!-- Footer - Contact Info -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_contact footer_column">
+								<div class="footer_title">Contact Us</div>
 								<ul class="footer_about_list">
 									<li>
 										<div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div>
-										<span>+45 677 8993000 223</span>
+										<span>+91 9011 112 221</span>
 									</li>
 									<li>
 										<div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div>
-										<span>office@template.com</span>
+										<span>aayushcareofhealth@gmail.com</span>
 									</li>
 									<li>
 										<div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div>
-										<span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span>
+										<span>Sagar Apartment, Office No. 7 , Floor No.3 , Parihar Chowk, Sangavi Kesari Road, Above Wellness Forever, Aundh, Pune 411007</span>
 									</li>
 								</ul>
 							</div>
 						</div>
 
-						<!-- Footer - Links -->
-						<div class="col-lg-4 footer_col">
-							<div class="footer_links footer_column">
-								<div class="footer_title">Useful Links</div>
-								<ul>
-									<li><a href="#">Testimonials</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Apply for a Job</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
-									<li><a href="#">Our Partners</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Free services</a></li>
-									<li><a href="#">About us</a></li>
-									<li><a href="#">News</a></li>
-									<li><a href="#">Contact</a></li>
-									<li><a href="#">Our Screening Program</a></li>
-									<li><a href="#">FAQ</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Footer - News -->
-						<div class="col-lg-4 footer_col">
-							<div class="footer_news footer_column">
-								<div class="footer_title">Useful Links</div>
-								<ul>
-									<li>
-										<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
-										</div>
-										<div class="footer_news_date">March 10, 2018</div>
-									</li>
-									<li>
-										<div class="footer_news_title"><a href="news.html">Donec in libero sit amet mi
-												vulputate</a></div>
-										<div class="footer_news_date">March 10, 2018</div>
-									</li>
-									<li>
-										<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
-										</div>
-										<div class="footer_news_date">March 10, 2018</div>
-									</li>
-								</ul>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Copyright -->
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
@@ -452,20 +468,15 @@
 							<div
 								class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
 								<div class="cr">
-									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 									Copyright &copy;
-									<script>document.write(new Date().getFullYear());</script> All rights reserved |
-									This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-										href="https://colorlib.com" target="_blank">Colorlib</a>
-									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									<script>document.write(new Date().getFullYear());</script>
+									AyushCare | All Rights Reserved
 								</div>
 								<div class="footer_social ml-lg-auto">
 									<ul>
-										<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 									</ul>
 								</div>
